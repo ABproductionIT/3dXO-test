@@ -1,10 +1,10 @@
 import numpy as np
 from calculation import checkWinner
 # menak es parametr@ talises qashvumes mi kom
-level = 3
+level = 4
 
 def makeCube(level):
-    return  np.zeros([level] * level)
+    return  np.zeros((level, level, level))
 
 cube = makeCube(level)
 
@@ -19,12 +19,11 @@ O = level + X
 # cube[1][1][1] = 1
 # cube[2][0][2] = 1
 
-# cube[0][0][0][0][0] = 1
-# cube[1][1][1][1][1] = 1
-# cube[2][2][2][2][2] = 1
-# cube[3][3][3][3][3] = 1
-# cube[4][4][4][4][4] = 1
+cube[0,0,0] = 1
+cube[1,1,3] = 1
+cube[2,2,2] = 1
 
 
+print(cube)
 print(checkWinner(cube, X, O, level))
 
