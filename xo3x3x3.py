@@ -32,4 +32,5 @@ cord_z= 2
 
 cube[cord_z, cord_y, cord_x]=X
 print(cube)
+#222 yacheyken yndunum a X-i arjeqy (1)
 
