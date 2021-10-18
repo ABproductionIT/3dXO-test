@@ -1,7 +1,9 @@
 import numpy as np
 from calculation import checkWinner
+from setFigurCordinates import setFigurCordinates
+
 # menak es parametr@ talises qashvumes mi kom
-level = 4
+level = 3
 
 def makeCube(level):
     return  np.zeros((level, level, level))
@@ -19,11 +21,17 @@ O = level + X
 # cube[1][1][1] = 1
 # cube[2][0][2] = 1
 
-cube[0,0,0] = 1
-cube[1,1,3] = 1
-cube[2,2,2] = 1
+# cube[0,0,2] = 1
+cube[0,1,1] = 1
+# cube[0,2,0] = 1
+# cube[1,0,1] = 1
+# cube[2,0,0] = 1
+# cube[0,2,0] = 1
+# cube[1,1,0] = 1
+# cube[2,0,0] = 1
+# cube[1,1,1] = 1
+# cube[1,2,2] = 1
 
-
-print(cube)
+print(setFigurCordinates(cube, O))
 print(checkWinner(cube, X, O, level))
 

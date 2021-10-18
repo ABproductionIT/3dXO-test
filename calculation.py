@@ -65,6 +65,21 @@ def checkWinner(cube, X, O, level):
             if (count == O * level):
                 return 'o'
 
+    #new
+    for y in range(len(cube)):
+        for y2 in range(len(cube)):
+            count = 0
+            l = 0;
+            j = len(cube) - 1
+            for y3 in range(len(cube)):
+                count += cube[j][y][l]
+                l += 1
+                j -= 1
+            if (count == X * level):
+                return 'x'
+            if (count == O * level):
+                return 'o'
+
     for y in range(len(cube)):
         for y2 in range(len(cube)):
             count = 0
@@ -72,6 +87,20 @@ def checkWinner(cube, X, O, level):
             for y3 in range(len(cube)):
                 count += cube[l][l][y]
                 l+=1
+            if (count == X * level):
+                return 'x'
+            if (count == O * level):
+                return 'o'
+    #new
+    for y in range(len(cube)):
+        for y2 in range(len(cube)):
+            count = 0
+            l = 0;
+            j = len(cube) - 1;
+            for y3 in range(len(cube)):
+                count += cube[l][j][y]
+                l += 1
+                j -= 1
             if (count == X * level):
                 return 'x'
             if (count == O * level):
